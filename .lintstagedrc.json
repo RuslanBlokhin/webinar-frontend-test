@@ -1,0 +1,4 @@
+{
+  "src/**/*.{json,css,scss,md}": ["prettier --whrite"],
+  "src/**/*.{js,jsx,ts,tsx}": ["prettier --whrite", "eslint --fix"]
+}
