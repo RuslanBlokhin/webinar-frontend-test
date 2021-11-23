@@ -33,8 +33,6 @@ function App() {
 function Content() {
   const { todoItems } = useTodoItems();
 
-  // const array = TodoItemsList.sortedItems;
-
   const [todo, setTodo] = useState(todoItems);
 
   const onDragEnd = (result: DropResult) => {
