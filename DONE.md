@@ -14,4 +14,5 @@
 #### T3. Иммутабельность
 
 - Переведите код `todoItemsReducer` на
-  [ImmerJS](https://immerjs.github.io/immer/)
+  [ImmerJS](https://immerjs.github.io/immer/)//Сделал добавление через push,
+  чтобы новые дела добавлялись в конец, как по мне так логичнее

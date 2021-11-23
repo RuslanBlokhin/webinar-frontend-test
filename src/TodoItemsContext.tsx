@@ -15,7 +15,7 @@ export interface TodoItem {
   done: boolean;
 }
 
-interface TodoItemsState {
+export interface TodoItemsState {
   todoItems: TodoItem[];
 }
 
@@ -81,7 +81,10 @@ export const useTodoItems = () => {
   return todoItemsContext;
 };
 
-function todoItemsReducer(state: TodoItemsState, action: TodoItemsAction) {
+export function todoItemsReducer(
+  state: TodoItemsState,
+  action: TodoItemsAction,
+) {
   switch (action.type) {
     case 'loadState':
       return action.data;
@@ -112,8 +115,6 @@ function todoItemsReducer(state: TodoItemsState, action: TodoItemsAction) {
       const item = state.todoItems[itemIndex];
       console.log(item);
       const toggleItem = produce(state, draft => {
-        // const todo = draft.todoItems.find(({ id }) => id === action.data.id);
-        // console.log(todo);
         draft.todoItems[itemIndex].done = !item.done;
       });
       return toggleItem;
